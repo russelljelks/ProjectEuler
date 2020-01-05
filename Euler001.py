@@ -19,6 +19,4 @@ for i in range (1, 1000):
         # print ("Either")
         total = total + i
 
-# answer 233168
-
-print (total)
+print (total) # answer 233168
