@@ -6,10 +6,16 @@ What is the largest prime factor of the number 600851475143 ?
 
 # assuming the best method to factor a number N is to count up a list of primes from 2 to sqrt(N) and test each
 
-N = 10000000001
-#N = 600851475143
+########################################################################################
+#         YES I KNOW that the Seive of Eratosthenes is inefficient in this case.       #
+# I ALSO KNOW that I probably didn't code it right anyway, since I did it from memory. #
+#                              BUT IT WORKS - Eventually.                              #
+########################################################################################
+
+#N = 1000000001
+N = 600851475143
 NN = int (N**0.5)
-print (N, NN)
+# print (N, NN)
 
 def primeList (N):
     list = []
@@ -33,13 +39,15 @@ def primeList (N):
                 
 
 listOfPrimes = primeList (N)
-print (listOfPrimes)
+# print (listOfPrimes)
 
 listOfFactors = []
 
 for each in listOfPrimes:
     if not (N%each):
         listOfFactors.append (each)
-        print (each)
+        # print (each)
 
-print (listOfFactors)
+# print (listOfFactors)    ###############
+print (listOfFactors [-1]) # answer 6857 #
+                           ###############
